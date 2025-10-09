@@ -61,3 +61,14 @@ document.getElementById("calcRendForm").addEventListener("submit", function(e) {
         `✅ Rendimiento de este viaje: ${rendimiento.toFixed(2)} km/L<br>` +
         `📊 Promedio acumulado: ${promedio.toFixed(2)} km/L`;
 });
+
+// Función para limpiar resultados
+function limpiarResultados() {
+    document.getElementById('resultadoGasto').textContent = '';
+    document.getElementById('resultadoRend').textContent = '';
+}
+
+// Limpiar resultados al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    limpiarResultados();
+});

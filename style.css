@@ -77,3 +77,31 @@ footer {
     background-color: #0277bd;
     color: white;
 }
+
+/* Estilos para los contenedores de anuncios */
+.ad-container {
+    margin: 20px 0;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        margin: 10px auto;
+        padding: 0 5px;
+    }
+    
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .ad-container {
+        margin: 15px 0;
+        padding: 8px;
+    }
+}
