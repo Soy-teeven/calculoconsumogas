@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Combustible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚗 Calculadora de Combustible</h1>
+        <p>Calcula tu gasto mensual y el rendimiento de tu vehículo fácilmente.</p>
+    </header>
+
+    <main>
+        <!-- Calculadora principal -->
+        <section id="calcPrincipal">
+            <h2>💰 Calcula tu gasto de gasolina</h2>
+            <form id="calcForm">
+                <label>Kilómetros recorridos (por día):</label>
+                <input type="number" id="km" placeholder="Ej: 54" step="any" required min="0.1">
+
+                <label>Rendimiento del vehículo (km/L):</label>
+                <input type="number" id="rend" placeholder="Ej: 11.1" step="any" required min="0.1">
+
+                <label>Precio de gasolina por galón (USD):</label>
+                <input type="number" id="precio" placeholder="Ej: 2.72" step="any" required min="0.1">
+                <small style="color: gray;">Precio estándar Ecuador (Octubre 2025): $2.72 - Gasolina Extra</small>
+
+                <button type="submit">Calcular gasto</button>
+            </form>
+            <p id="resultadoGasto"></p>
+        </section>
+
+        <!-- Calculadora de rendimiento -->
+        <section id="rendimientoVehiculo">
+            <h2>📊 Calcular rendimiento de tu vehículo</h2>
+            <p>Si no conoces el rendimiento (km/L) de tu carro, sigue estos pasos:</p>
+            <ol>
+                <li>Llena el tanque completamente y anota el kilometraje actual.</li>
+                <li>Conduce normalmente hasta que el tanque esté casi vacío.</li>
+                <li>Vuelve a llenar el tanque y anota cuántos litros entraron.</li>
+                <li>Divide los kilómetros recorridos por los litros consumidos.</li>
+            </ol>
+
+            <h3>Calcula tu rendimiento aquí:</h3>
+            <form id="calcRendForm">
+                <label>Kilómetros recorridos:</label>
+                <input type="number" id="kmRec" placeholder="Ej: 300" step="any" required min="0.1">
+
+                <label>Cantidad de combustible:</label>
+                <input type="number" id="combustible" placeholder="Ej: 27" step="any" required min="0.1">
+
+                <label>Unidad de combustible:</label>
+                <select id="unidad">
+                    <option value="litros">Litros (L)</option>
+                    <option value="galones">Galones (gal)</option>
+                </select>
+
+                <button type="submit">Calcular rendimiento</button>
+            </form>
+
+            <p id="resultadoRend"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 NovaByte - Innovación digital a tu alcance</p>
+        <p>Contacto: <a href="mailto:novabyte.contacto@gmail.com">novabyte.contacto@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
